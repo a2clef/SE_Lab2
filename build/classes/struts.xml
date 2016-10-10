@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	 
+	 
+	 <constant name="struts.devMode" value="true" />
+	 
+	 <package name="default"  extends="struts-default">
+     
+     	
+     <action name="hello">
+            <result>/hello.jsp</result>
+      </action>   
+      
+      <action name="searchbook" 
+            class="libsystem.action.searchbook" >
+            <result name="success">/search_book.jsp</result>
+            <result name="failed">/input_error.jsp</result>
+      </action> 
+
+      <action name="addbook" 
+            class="libsystem.action.addbook" >
+            <result name="success">/insert_success.jsp</result>
+            <result name="failed">/insert_author.jsp</result>
+            <result name="error">/input_error.jsp</result>
+      </action> 
+
+      <action name="addauthor" 
+            class="libsystem.action.addauthor" >
+            <result name="success">/insert_success.jsp</result>
+            <result name="error">/input_error.jsp</result>
+      </action> 
+      
+      <action name="deletebook" 
+            class="libsystem.action.deletebook" >
+            <result name="success">/delete_success.jsp</result>
+      </action> 
+      
+      <action name="searchauthor" 
+            class="libsystem.action.searchauthor" >
+            <result name="success">/search_author.jsp</result>
+      </action> 
+    
+    
+    </package>
+    <!-- Add packages here -->
+
+</struts>
